@@ -34,6 +34,8 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  margin-right: auto;
+  margin-left: auto;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -69,9 +71,7 @@ img {
 }
 
 .logo-header-accent {
-  margin-right: 76px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  padding: 16px 0;
 }
 
 .header-menu-list {
@@ -125,7 +125,6 @@ img {
   line-height: 0;
   background-color: transparent;
   border: none;
-  margin-right: 16px;
 }
 
 .current {
@@ -162,11 +161,8 @@ img {
 
 .title {
   font-weight: 700;
-
   max-width: 216px;
-
   font-size: 36px;
-
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: #fff;
@@ -434,9 +430,10 @@ img {
 }
 
 footer {
+  max-width: 320px;
   background-color: #2e2f42;
   /* padding: 100px 0; */
-  padding: 96px 16px 96px 16px;
+  padding: 96px 0 96px 0;
 }
 .logo-footer {
   color: #f4f4fd;
@@ -542,7 +539,7 @@ footer {
 .form-input {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   padding-left: 16px;
   font-weight: 400;
@@ -699,12 +696,7 @@ footer {
 }
 
 .modal-icon {
-  fill: #2e2f42;
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #f4f4fd;
 }
 
 .modal-input:focus + .modal-icon {
@@ -830,14 +822,32 @@ footer {
   visibility: visible;
 }
 .modal-mob {
-  width: 320px;
+  width: 100%;
+  height: 100%;
   background: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+.modal-button-mod {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+}
 .modal-nav {
   margin: 72px 16px auto;
 }
@@ -849,6 +859,14 @@ footer {
   color: #2e2f42;
   padding-bottom: 40px;
 }
+.modal-menu-item-first {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  color: #404bbf;
+  padding-bottom: 40px;
+}
 
 .modal-address {
   font-style: normal;
@@ -858,12 +876,41 @@ footer {
 .modal-address-item {
   padding-bottom: 24px;
 }
+
+.modal-menu-link-first {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #404bbf;
+  padding-bottom: 24px;
+}
+
+.modal-menu-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+  padding-bottom: 24px;
+}
+
+.modal-address-link-first {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #4d5ae5;
+}
+
 .modal-address-link {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: #2e2f42;
   padding-bottom: 24px;
 }
 
@@ -880,17 +927,28 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  display: flex;
+  gap: 40px;
+  margin-bottom: 72px;
 }
+
 .modal-social-icon {
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  fill: white;
+  align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-social-item {
+  width: 40px;
+  height: 40px;
+}
+.modal-icon {
+  fill: #f4f4fd;
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 320px) {
@@ -1052,7 +1110,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
     padding: 0 15px;
@@ -1090,7 +1148,7 @@ footer {
     height: 600px;
     padding: 188px 0;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    max-width: 1440px;
+    max-width: 1158px;
   }
 
   .benefits {
@@ -1149,11 +1207,11 @@ footer {
 
   .team-container {
     padding: 32px 0;
-    max-width: 1440px;
+    max-width: 1158px;
   }
 
   .portfolio {
-    max-width: 1440px;
+    max-width: 1158px;
   }
 
   .portfolio-list {
@@ -1165,7 +1223,7 @@ footer {
   }
 
   .footer {
-    max-width: 1440px;
+    max-width: 1158px;
   }
 
   .footer-form-conteiner {
