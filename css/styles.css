@@ -669,6 +669,7 @@ footer {
   align-items: center;
   display: block;
   margin-bottom: 4px;
+  position: relative;
 }
 
 .modal-input {
@@ -696,7 +697,12 @@ footer {
 }
 
 .modal-icon {
-  fill: #f4f4fd;
+  fill: #2e2f42;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus + .modal-icon {
@@ -947,9 +953,6 @@ footer {
   width: 40px;
   height: 40px;
 }
-.modal-icon {
-  fill: #f4f4fd;
-}
 
 @media screen and (min-resolution: 192dpi) and (min-width: 320px) {
   .section-first {
@@ -962,6 +965,8 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+
+  
   .container {
     max-width: 768px;
   }
@@ -1005,7 +1010,7 @@ footer {
       ),
       url(../images/img10-tab.jpg);
     padding: 112px 0;
-    /* max-width: 768px; */
+    max-width: 768px;
   }
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -1061,14 +1066,11 @@ footer {
   .portfolio-item {
     width: calc((100% - 24px) / 2);
   }
-  .footer {
-    padding-left: 108px;
-  }
 
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
   }
   .section-left {
     display: block;
@@ -1099,7 +1101,8 @@ footer {
   .modal {
     width: 408px;
     height: 584px;
-    min-height: 623px;
+    /* min-height: 623px; */
+
     padding: 72px 24px 24px 24px;
   }
   .modal-input {
@@ -1109,7 +1112,13 @@ footer {
   .modal-input-comment {
     width: 360px;
   }
+  
 }
+
+@media (min-resolution: 192dpi) and (min-width: 768px) {
+    .section-first {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/img10-tab-2x.jpg);
+    }
 
 @media screen and (min-width: 1158px) {
   .container {
@@ -1145,7 +1154,7 @@ footer {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/img10.jpg);
+      url(../images/img10-.jpg);
     height: 600px;
     padding: 188px 0;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1256,5 +1265,21 @@ footer {
 
   .form-input {
     width: 264px;
+  }
+
+  @media (min-resolution: 192dpi) and (min-width: 1158px) {
+    .section-first {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/img10-2x.jpg);
+    }
+  }
+}
+@media screen  and (min-width: 768px) {
+  .backdrop-mob {
+    display: none;
   }
 }
